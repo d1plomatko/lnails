@@ -1,31 +1,36 @@
-
 const header = document.querySelector('.header')
 
 window.onscroll = () => {
-    if (window.scrollY > 50){
+    if (window.scrollY > 50) {
         header.classList.add('background')
-    }else {
+    } else {
         header.classList.remove('background')
     }
 
 }
 
 
+
 const menu = document.querySelector('.menu')
+
+// if (menu.classList.contains('active')){
+//     document.body.classList.add('hidden')
+// }
 
 document.querySelector('.burger-menu').onclick = () => {
     menu.classList.toggle('active')
+    document.body.classList.toggle('hidden')
 }
 
 const links = document.querySelectorAll('.link')
 
-for (let link of links){
+for (let link of links) {
     link.onclick = () => {
         menu.classList.remove('active')
     }
 }
 
-class Service{
+class Service {
     constructor(name, price, time) {
         this.name = name;
         this.price = price;
@@ -34,13 +39,13 @@ class Service{
 }
 
 const services = [
+    new Service('Зняття + чистка + покриття гель-лаком', 400, 120),
+    new Service('Манікюр (комбінований/класичний/апаратний)', 400, 120),
+    new Service('Манікюр + покриття гель-лаком', 400, 120),
+    new Service('Покриття гель-лаком', 400, 120),
+    new Service('Зняття гель-лаку (+опил форми)', 400, 120),
     new Service('Манікюр чоловічий', 400, 120),
-    new Service('Манікюр чоловічий', 400, 120),
-    new Service('Манікюр чоловічий', 400, 120),
-    new Service('Манікюр чоловічий', 400, 120),
-    new Service('Манікюр чоловічий', 400, 120),
-    new Service('Манікюр чоловічий', 400, 120),
-    new Service('Манікюр чоловічий', 400, 120)
+    new Service('Зняття + чистка + покриття гель-лаком + укріплення', 400, 120)
 ]
 
 
@@ -77,9 +82,21 @@ for (let service of services) {
 
     services_wrapper.append(wrapper)
 
+
     button.onclick = () => {
+        const openItem = document.querySelector('.open')
+
+        if (openItem && openItem !== wrapper){
+            openItem.classList.remove('open')
+        }
+
         wrapper.classList.toggle('open')
     }
 }
 
+
+
+setTimeout(() => {
+    document.querySelector('.intro_inner').classList.add('opacity')
+}, 1300)
 
