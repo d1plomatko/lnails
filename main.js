@@ -2,22 +2,21 @@ const header = document.querySelector('.header')
 
 window.onscroll = () => {
     if (window.scrollY > 50) {
-        header.classList.add('background')
+        header.classList.add('header__background')
     } else {
-        header.classList.remove('background')
+        header.classList.remove('header__background')
     }
 
 }
 
 
 
-const menu = document.querySelector('.menu')
+const menu = document.querySelector('.header__menu')
+if (menu.classList.contains('active')){
+    header.classList.add('background_menu')
+}
 
-// if (menu.classList.contains('active')){
-//     document.body.classList.add('hidden')
-// }
-
-document.querySelector('.burger-menu').onclick = () => {
+document.querySelector('.menu__icon').onclick = () => {
     menu.classList.toggle('active')
     document.body.classList.toggle('hidden')
 }
@@ -49,14 +48,14 @@ const services = [
 ]
 
 
-const services_wrapper = document.querySelector('.services');
+const services_wrapper = document.querySelector('.accordion__wrapper');
 
 for (let service of services) {
     const wrapper = document.createElement('div')
-    wrapper.classList.add('service')
+    wrapper.classList.add('accordion')
 
     const service_upper = document.createElement('div')
-    service_upper.classList.add('service_upper')
+    service_upper.classList.add('accordion__title')
 
     const heading = document.createElement('h6')
     heading.innerHTML = `<i class="fa-solid fa-tag"></i> ${service.name}`
@@ -68,7 +67,7 @@ for (let service of services) {
     service_upper.append(heading, button)
 
     const service_details = document.createElement('div')
-    service_details.classList.add('service_details')
+    service_details.classList.add('accordion__content')
 
     const service_price = document.createElement('div')
     service_price.innerHTML = `<i class="fa-solid fa-money-bill-1-wave"></i> ${service.price}UAH`
@@ -97,6 +96,7 @@ for (let service of services) {
 
 
 setTimeout(() => {
-    document.querySelector('.intro_inner').classList.add('opacity')
-}, 1300)
+    document.querySelector('.intro__inner').classList.add('opacity')
+}, 1000)
+
 
