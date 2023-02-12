@@ -14,7 +14,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Marck+Script&family=Montserrat+Alternates&display=swap"
           rel="stylesheet">
-
+    <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
     <script src="https://kit.fontawesome.com/6ba9ff2003.js" crossorigin="anonymous"></script>
 
     <title>Liana Beautynails</title>
@@ -29,10 +32,13 @@
                     <a class="link" href="#about">Про мене</a>
                 </li>
                 <li class="menu__link">
-                    <a class="link" href="#works">Роботи</a>
+                    <a class="link" href="#works">Мої роботи</a>
                 </li>
                 <li class="menu__link">
                     <a class="link" href="#price">Послуги</a>
+                </li>
+                <li class="menu__link">
+                    <a class="link" href="#location">Локація</a>
                 </li>
                 <li class="menu__bottom__links">
                     <div class="social__link">
@@ -57,7 +63,8 @@
     <div class="container">
         <div class="intro__inner">
             <h1 class="intro__title">Liana Beautynails</h1>
-            <a class="intro__link" href="https://www.instagram.com/liana.beautynails/">Зробити запис</a>
+            <a class="intro__link" href="https://www.instagram.com/liana.beautynails/">Зробити
+                запис</a>
         </div>
         <a class="chevron__bottom" href="#about">
             <i class="fa-solid fa-chevron-down"></i>
@@ -66,9 +73,15 @@
 </section>
 <section class="about" id="about">
     <div class="container">
+        <h2 class="heading">Про мене</h2>
         <div class="about__info">
+            <div class="info__image">
+                <div class="image__wrapper">
+                    <img src="https://qph.cf2.quoracdn.net/main-qimg-c8f84675171d0f9c3536b47f3e8f059d-lq"
+                         alt="me">
+                </div>
+            </div>
             <div class="info__text">
-                <h2 class="heading">Про мене</h2>
                 <div class="sub_title">Мене звати <span class="name">Юліяна Оршак</span></div>
                 <p>Lorem ipsum dolor sit amet, <a href="">consectetur</a> adipisicing elit. Animi,
                     atque consequuntur
@@ -78,12 +91,6 @@
                 <p>Lorem ipsum dolor sit amet, <a href="">consectetur</a> adipisicing elit. Animi,
                     atque consequuntur
                 </p>
-            </div>
-            <div class="info__image">
-                <div class="image__wrapper">
-                    <img src="https://qph.cf2.quoracdn.net/main-qimg-c8f84675171d0f9c3536b47f3e8f059d-lq"
-                         alt="me">
-                </div>
             </div>
         </div>
     </div>
@@ -119,26 +126,61 @@
 <section class="price_list" id="price">
     <div class="container">
         <h2 class="heading">Послуги</h2>
-        <div class="accordion__wrapper">
-
-        </div>
+       <div class="services__content">
+           <div class="accordion__wrapper">
+           </div>
+           <div class="swiper__wrapper">
+               <div class="swiper">
+                   <div class="swiper-wrapper">
+                       <div class="swiper-slide">
+                           <img src="images/4.jpeg"
+                                alt="">
+                       </div>
+                       <div class="swiper-slide">
+                           <img src="images/1.jpeg"
+                                alt="">
+                       </div>
+                       <div class="swiper-slide">
+                           <img src="images/2.jpeg"
+                                alt="">
+                       </div>
+                       <div class="swiper-slide">
+                           <img src="images/3.jpeg"
+                                alt="">
+                       </div>
+                   </div>
+                   <div class="swiper__navigation">
+                       <div class="swiper-button-prev"></div>
+                       <div class="swiper-button-next"></div>
+                   </div>
+               </div>
+           </div>
+       </div>
     </div>
 </section>
-<section class="map">
+<section class="map" id="location">
     <div class="container">
-        <h2 class="heading">Локація</h2>
+            <h2 class="heading">Локація</h2>
+              <div class="map__content">
+                  <iframe
+                          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2571.8204332859564!2d23.9603028156022!3d49.864617637283494!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473adddf58acee1b%3A0xd5869eb6d0bde8f8!2zNEEsINCy0YPQu9C40YbRjyDQm9GD0YfQutCw0Y8sIDTQkCwg0JvRjNCy0ZbQsiwg0JvRjNCy0ZbQstGB0YzQutCwINC-0LHQu9Cw0YHRgtGMLCA3OTAwMA!5e0!3m2!1suk!2sua!4v1675885380030!5m2!1suk!2sua"
+                          width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                          referrerpolicy="no-referrer-when-downgrade"></iframe>
+                  <div class="studio__grid">
+                      <div><img src="images/st1.jpeg" alt=""></div>
+                      <div><img src="images/st2.jpeg" alt=""></div>
+                      <div><img src="images/st3.jpeg" alt=""></div>
+                      <div><img src="images/st4.jpeg" alt=""></div>
+                  </div>
+              </div>
 
-        <iframe class="g_map"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2571.8204332859564!2d23.9603028156022!3d49.864617637283494!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473adddf58acee1b%3A0xd5869eb6d0bde8f8!2zNEEsINCy0YPQu9C40YbRjyDQm9GD0YfQutCw0Y8sIDTQkCwg0JvRjNCy0ZbQsiwg0JvRjNCy0ZbQstGB0YzQutCwINC-0LHQu9Cw0YHRgtGMLCA3OTAwMA!5e0!3m2!1suk!2sua!4v1675885380030!5m2!1suk!2sua"
-                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"></iframe>
+
     </div>
 </section>
-<script src="main.js"></script>
 <footer class="socials">
     <div class="small_container">
         <div class="footer_rights">
-            © 2023 LIANABEAUTYNAILS. Всі права захищено.
+            © 2023 LBnails. Всі права захищено.
         </div>
         <div class="footer_links">
             <div class="social__link">
@@ -155,4 +197,6 @@
     </div>
 </footer>
 </body>
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+<script src="main.js"></script>
 </html>

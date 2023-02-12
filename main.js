@@ -18,14 +18,21 @@ if (menu.classList.contains('active')){
 
 document.querySelector('.menu__icon').onclick = () => {
     menu.classList.toggle('active')
-    document.body.classList.toggle('hidden')
+    if (menu.classList.contains('active')){
+        document.body.classList.add('hidden')
+    } else {
+        document.body.classList.remove('hidden')
+
+    }
 }
+
 
 const links = document.querySelectorAll('.link')
 
 for (let link of links) {
     link.onclick = () => {
         menu.classList.remove('active')
+        document.body.classList.remove('hidden')
     }
 }
 
@@ -95,8 +102,12 @@ for (let service of services) {
 
 
 
-setTimeout(() => {
-    document.querySelector('.intro__inner').classList.add('opacity')
-}, 1000)
+new Swiper('.swiper', {
+    loop: true,
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    }
+})
 
 
