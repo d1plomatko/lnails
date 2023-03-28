@@ -14,6 +14,7 @@
         margin-bottom: 40px;
         text-align: center;
         padding: 0;
+        color: black;
     }
 }
 
@@ -28,6 +29,8 @@
     .about .container {
        justify-content: flex-start;
         height: auto;
+        padding-top: 80px;
+        padding-bottom: 40px;
     }
 
     .about__info,
@@ -62,6 +65,19 @@
     .map__content .studio__grid {
         width: 75%;
     }
+
+    .grid__item__6,
+    .grid__item__7 {
+        display: none;
+    }
+
+    .grid__item__2 {
+        grid-column-end: 4;
+    }
+
+    .grid__item__5 {
+        grid-column-end: 3;
+    }
 }
 
 
@@ -72,6 +88,10 @@
 
 
 @media screen and (max-width: 550px) {
+
+    #work__big img {
+        width: 90%;
+    }
 
     .about .container {
         padding-bottom: 20px;
@@ -239,7 +259,8 @@
     .map__content {
         gap: 0;
     }
-    
+
+
     .map iframe,
     .map .studio__grid {
         width: 100%;

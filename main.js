@@ -1,3 +1,4 @@
+
 const header = document.querySelector('.header')
 
 window.onscroll = () => {
@@ -110,4 +111,18 @@ new Swiper('.swiper', {
     }
 })
 
+const works = document.querySelectorAll('.work')
+const bigWork = document.querySelector('#work__big')
 
+works.forEach(work => {
+    work.onclick = () => {
+        bigWork.children[0].src = work.src
+        bigWork.style.display = 'flex'
+        document.body.style.overflow = 'hidden'
+    }
+})
+
+bigWork.onclick = () => {
+    bigWork.style.display = 'none'
+    document.body.style.overflow = 'visible'
+}

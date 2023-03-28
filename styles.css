@@ -406,6 +406,12 @@ h6 {
     height: 100%;
 }
 
+.info__text ul li{
+    color: black;
+    margin: 10px 0 10px 50px;
+    list-style: circle;
+}
+
 .info__image {
     background: #3d322b;
     transform: rotate(-8deg);
@@ -460,6 +466,7 @@ h6 {
     width: 100%;
     height: 100%;
     transition: opacity .2s linear;
+    cursor: pointer;
 }
 
 .works__grid img:hover {
@@ -475,7 +482,7 @@ h6 {
 
 .grid__item__2 {
     grid-column-start: 2;
-    grid-column-end: 4;
+    grid-column-end: 3;
     grid-row-start: 1;
     grid-row-end: 1;
 }
@@ -513,11 +520,32 @@ h6 {
 
 .grid__item__5 {
     grid-column-start: 1;
-    grid-column-end: 3;
+    grid-column-end: 2;
     grid-row-start: 3;
     grid-row-end: 3;
 }
 
+#work__big {
+    top: 0;
+    left: 0;
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 150;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    transition: display .2s ease;
+    cursor: pointer;
+}
+
+#work__big img {
+    width: 50%;
+    z-index: 200;
+    display: block;
+    touch-action: none;
+}
 
 /* === Services === */
 
@@ -530,10 +558,11 @@ h6 {
     text-align: right;
     right: 0;
     top: 0;
-    z-index: 10;
+    z-index: 20;
     position: absolute;
     font-size: 62px;
-    color: #e5baa1;
+    color: snow;
+
     /*width: 200px;*/
 }
 
@@ -571,13 +600,50 @@ h6 {
     min-width: 250px;
 
     z-index: 10;
+    background-color: #e5baa1;
+    padding: 30px 20px;
+    border-radius: 15px;
+    height: 100%;
+    overflow: hidden;
+
 }
 
 
+.swiper {
+    overflow: hidden;
+    max-height: 464px;
+}
+
+.swiper__sub-title {
+    padding: 10px 15px;
+    font-size: 20px;
+    font-weight: bolder;
+    color: black;
+}
+
+.swiper-slide {
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+    margin: 0;
+
+}
 
 .swiper-slide img {
-    height: auto;
+    height: 100%;
     width: 100%;
+
+}
+
+.image__info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 100%;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px;
 }
 
 
@@ -683,9 +749,7 @@ h6 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /*padding: 10px 0;*/
     line-height: 1;
-    /*border-bottom: 2px solid black;*/
     transition: border-bottom-color .2s ease;
 }
 
@@ -814,6 +878,7 @@ iframe {
 
 .studio__grid div {
     overflow: hidden;
+
 }
 
 .studio__grid div img {
