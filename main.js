@@ -65,14 +65,18 @@ for (let service of services) {
     const service_upper = document.createElement('div')
     service_upper.classList.add('accordion__title')
 
+    const icon = document.createElement('div')
+    icon.classList.add('service_icon')
+    icon.innerHTML = '<i class="fa-solid fa-tag"></i>'
+
     const heading = document.createElement('h6')
-    heading.innerHTML = `<i class="fa-solid fa-tag"></i> ${service.name}`
+    heading.innerText = service.name
 
     const button = document.createElement('button')
     button.id = 'btn'
     button.innerHTML = `<i class="fa-solid fa-chevron-down"></i>`
 
-    service_upper.append(heading, button)
+    service_upper.append(icon,heading, button)
 
     const service_details = document.createElement('div')
     service_details.classList.add('accordion__content')
@@ -80,10 +84,8 @@ for (let service of services) {
     const service_price = document.createElement('div')
     service_price.innerHTML = `<i class="fa-solid fa-money-bill-1-wave"></i> ${service.price}UAH`
 
-    const service_time = document.createElement('div')
-    service_time.innerHTML = `<i class="fa-solid fa-hourglass"></i> ${service.time}min`
 
-    service_details.append(service_price, service_time)
+    service_details.append(service_price)
 
     wrapper.append(service_upper, service_details)
 

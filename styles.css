@@ -753,6 +753,11 @@ h6 {
     transition: border-bottom-color .2s ease;
 }
 
+.service_icon {
+    font-size: 20px;
+    margin-right: 15px;
+}
+
 .accordion h6 {
     font-size: 20px;
     width: 90%;
