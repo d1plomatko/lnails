@@ -260,8 +260,10 @@
         gap: 0;
     }
 
+    .map iframe {
+        margin-bottom: 40px;
+    }
 
-    .map iframe,
     .map .studio__grid {
         width: 100%;
     }
